@@ -17,7 +17,8 @@ let package = Package(
     targets: [
         .target(
             name: "UICountingLabel",
-            path: "UICountingLabel"
+            path: "UICountingLabel",
+            publicHeadersPath: "include"
         ),
     ]
 )
