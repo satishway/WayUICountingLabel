@@ -1,0 +1,4 @@
+module UICountingLabel {
+    umbrella header "/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/UICountingLabel/Classes/UICountingLabel.h"
+    export *
+}

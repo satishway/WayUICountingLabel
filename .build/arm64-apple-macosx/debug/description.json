@@ -1,0 +1,55 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+
+  },
+  "targetDependencyMap" : {
+    "UICountingLabel" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "writeCommands" : {
+    "/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.build/UICountingLabel.m.o"
+        }
+      ],
+      "outputFilePath" : "/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.product/Objects.LinkFileList"
+    }
+  }
+}

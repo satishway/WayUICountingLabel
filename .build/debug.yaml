@@ -1,0 +1,54 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "UICountingLabel-arm64-apple-macosx15.0-debug.dylib": ["<UICountingLabel-arm64-apple-macosx15.0-debug.dylib>"]
+  "UICountingLabel-arm64-apple-macosx15.0-debug.module": ["<UICountingLabel-arm64-apple-macosx15.0-debug.module>"]
+  "main": ["<UICountingLabel-arm64-apple-macosx15.0-debug.dylib>","<UICountingLabel-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<UICountingLabel-arm64-apple-macosx15.0-debug.dylib>","<UICountingLabel-arm64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/UICountingLabel/Classes/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.build/UICountingLabel.m.o":
+    tool: clang
+    inputs: ["/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/UICountingLabel/Classes/UICountingLabel.m"]
+    outputs: ["/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.build/UICountingLabel.m.o"]
+    description: "Compiling UICountingLabel UICountingLabel.m"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang","-fobjc-arc","-target","arm64-apple-macosx10.13","-O0","-DSWIFT_PACKAGE=1","-DDEBUG=1","-fblocks","-index-store-path","/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/index/store","-fmodules","-fmodule-name=UICountingLabel","-fmodules-cache-path=/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/ModuleCache","-I","/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/UICountingLabel/Classes","-isysroot","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-fPIC","-g","-MD","-MT","dependencies","-MF","/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.build/UICountingLabel.m.d","-c","/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/UICountingLabel/Classes/UICountingLabel.m","-o","/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.build/UICountingLabel.m.o"]
+    deps: "/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.build/UICountingLabel.m.d"
+
+  "/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.build/UICountingLabel.m.o"]
+    outputs: ["/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.product/Objects.LinkFileList"
+
+  "<UICountingLabel-arm64-apple-macosx15.0-debug.dylib>":
+    tool: phony
+    inputs: ["/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/libUICountingLabel.dylib"]
+    outputs: ["<UICountingLabel-arm64-apple-macosx15.0-debug.dylib>"]
+
+  "<UICountingLabel-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.build/UICountingLabel.m.o"]
+    outputs: ["<UICountingLabel-arm64-apple-macosx15.0-debug.module>"]
+
+  "C.UICountingLabel-arm64-apple-macosx15.0-debug.dylib":
+    tool: shell
+    inputs: ["/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.build/UICountingLabel.m.o","/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.product/Objects.LinkFileList"]
+    outputs: ["/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/libUICountingLabel.dylib"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/libUICountingLabel.dylib"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug","-o","/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/libUICountingLabel.dylib","-module-name","UICountingLabel","-Xlinker","-no_warn_duplicate_libraries","-emit-library","-Xlinker","-install_name","-Xlinker","@rpath/libUICountingLabel.dylib","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/.build/arm64-apple-macosx/debug/UICountingLabel.product/Objects.LinkFileList","-runtime-compatibility-version","none","-target","arm64-apple-macosx10.13","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/UICountingLabel/Classes/","/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/Package.swift","/Users/satish-rajpurohit/Documents/RepoFork/WayUICountingLabel/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
