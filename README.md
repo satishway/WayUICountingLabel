@@ -4,7 +4,24 @@ Adds animated counting support to `UILabel`.
 
 ![alt text](https://github.com/dataxpress/UICountingLabel/blob/master/demo.gif "demo")
 
-## CocoaPods ######
+## Installation ######
+
+### Swift Package Manager ######
+UICountingLabel is available through Swift Package Manager. Add it to your project in Xcode:
+
+1. Go to **File** → **Add Package Dependencies...**
+2. Enter the repository URL: `https://github.com/yourusername/WayUICountingLabel.git`
+3. Click **Add Package**
+
+Alternatively, add it to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/yourusername/WayUICountingLabel.git", from: "1.4.1")
+]
+```
+
+### CocoaPods ######
 UICountingLabel is available on CocoaPods.
 Add this to your Podfile:
 
@@ -110,7 +127,24 @@ Ease In/Out starts out slow, speeds up towards the middle, and then slows down a
 
 ![alt text](https://github.com/dataxpress/UICountingLabel/blob/master/demo.gif "demo")
 
-## CocoaPods ######
+## 安装方式 ######
+
+### Swift Package Manager ######
+UICountingLabel 支持 Swift Package Manager 安装。在 Xcode 中添加：
+
+1. 选择 **File** → **Add Package Dependencies...**
+2. 输入仓库地址: `https://github.com/yourusername/WayUICountingLabel.git`
+3. 点击 **Add Package**
+
+或者在你的 `Package.swift` 中添加：
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/yourusername/WayUICountingLabel.git", from: "1.4.1")
+]
+```
+
+### CocoaPods ######
 UICountingLabel 可以使用cocoaPods导入,
 添加以下代码到你的Podfile文件:
 
